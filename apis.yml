@@ -1,23 +1,72 @@
 aid: biosqueeze
+
 name: Biosqueeze
-description: 'Biosqueeze is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://biosqueeze.com/assets/platform-home-subsurface.jpg
+
+description: 'BioSqueeze is a biomineralization platform company that provides engineered solutions for challenging subsurface problems across energy, defense, mining, infrastructure, and environmental sectors. By strengthening soils, sealing fluid pathways, and healing fractures, BioSqueeze enables increased bearing capacity, leak control, and infrastructure repair, with over 400 field deployments worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biosqueeze/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Biomineralization
+- SubsurfaceEngineering
+- Energy
+- Defense
+- Mining
+- Infrastructure
+- Environmental
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/biosqueeze-llms.txt
+- type: Hosts
+  url: hosts/biosqueeze-hosts.yml
+- type: Vendors
+  url: vendors/biosqueeze-vendors.yml
+- type: PrivacyPolicy
+  url: https://biosqueeze.com/privacy-policy
+- type: Leadership
+  url: https://biosqueeze.com/team
+- type: Blog
+  url: https://biosqueeze.com/blog
+- type: DomainSecurity
+  url: security/biosqueeze-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biosqueeze
+  url: https://biosqueeze.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: No API surface discovered; attempts to fetch OpenAPI spec at https://api.biosqueeze.com/openapi.json returned no content.
+  evidence:
+    - url: https://api.biosqueeze.com/openapi.json
+      status: 000
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
